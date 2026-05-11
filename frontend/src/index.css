@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+
+@import "@fontsource/inter";
+@import "@fontsource-variable/space-grotesk";
+
+:root {
+  --color-bg-primary: #020014;
+  --color-bg-secondary: #0A0A1F;
+  --color-indigo-glow: #1A0F3D;
+
+  --color-accent-purple: #6D3BFF;
+  --color-accent-cyan: #00AEEF;
+
+  --color-text-primary: #F3F4F6;
+  --color-hover-blue: #3BA3FF;
+
+  --color-overlay-dark: rgba(0, 0, 0, 0.4);
+}
+
+/* Redhawk Font */
+@font-face {
+  font-family: 'Redhawk';
+  src: url('./assets/fonts/Redhawk.otf') format('truetype');   /* change .ttf to .otf if needed */
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* ================== POPPINS ================== */
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:where(html, body, #root) {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.heading {
+  font-family: 'Redhawk', sans-serif;
+}
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+}
+.login-btn {
+  font-family: 'Poppins', sans-serif;
+  
+  border: 1px solid transparent;
+  border-radius: 20px;
+
+  background:
+    linear-gradient(#0A0A1F, #0A0A1F) padding-box,
+    linear-gradient(135deg, #3BA3FF, #6D3BFF) border-box;
+
+  color: #F3F4F6;
+
+  padding: 10px 32px;
+
+  transition: all 0.3s ease;
+}
+.login-btn:hover {
+  box-shadow: 0 0 15px rgba(59, 163, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+/* ============================signup================== */
+.signup-btn {
+  font-family: 'Poppins', sans-serif;
+
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, #3BA3FF 0%, #6D3BFF 100%);
+
+  color: #F3F4F6;
+
+   padding: 10px 32px;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 0 20px rgba(109, 59, 255, 0.35);
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+
+  background: linear-gradient(135deg, #4AB0FF 0%, #7B52FF 100%);
+
+  box-shadow: 
+    0 0 15px rgba(59, 163, 255, 0.45),
+    0 0 25px rgba(109, 59, 255, 0.45);
+}
+
