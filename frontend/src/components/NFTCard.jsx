@@ -1,12 +1,12 @@
-import pic1 from "../assets/pic1.jpg";
+import pic1 from "../assets/pic3.png";
 
 function NFTCard() {
   return (
     <div
-      className="relative w-[420px] rounded-3xl h-[650px] border-4 overflow-hidden border-4 border-white/10 backdrop-blur-xl"
+      className="relative w-[420px] rounded-3xl h-[650px]  overflow-hidden  backdrop-blur-xl"
       style={{
         background:
-          "linear-gradient(180deg, rgba(109,59,255,0.18) 0%, rgba(10,10,31,0.95) 100%)",
+          "linear-gradient(180deg, rgba(109,59,255,0.18) 0%, rgba(10,10,31,0.1) 100%)",
       }}
     >
 

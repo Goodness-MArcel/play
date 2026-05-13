@@ -1,6 +1,10 @@
 import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
 
+import  SponsorsCarousel from "../components/Sponsor.jsx";
+import TopSellers from "../components/TopSellers.jsx";
+
+
 function LandingPage() {
   return (
     <section
@@ -30,6 +34,8 @@ function LandingPage() {
       <div className="relative z-10">
         <Navbar />
         <Hero />
+        <SponsorsCarousel />
+        <TopSellers />
       </div>
 
     </section>

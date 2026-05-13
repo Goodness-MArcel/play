@@ -13,7 +13,7 @@ function Hero() {
             </p>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl heading font-black leading-[1.1] tracking-tighter">
-              Discover, Collect and Sell Dope Arts and NFTs
+              Discover, Collect And Sell Dope Arts And NFTs
             </h1>
 
             <p className="mt-6 text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl">
@@ -34,7 +34,7 @@ function Hero() {
             <StatsCard />
           </div>
 
-          <div className="flex-shrink-0 h-auto justify-center items-center hidden lg:flex ml-8 lg:ml-12">
+          <div className="flex-shrink-0 h-auto justify-center items-center hidden lg:flex ml-38 lg:ml-12">
             <NFTCard />
           </div>
         </div>

@@ -4,7 +4,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="relative z-20 p-5 text-white">
+    <nav className="sticky top-0 z-20 p-5 text-white">
       <div className="container flex items-center justify-between mx-auto">
 
         {/* LOGO */}
@@ -31,7 +31,7 @@ function Navbar() {
 
           <div className="flex gap-4 items-center">
             <button className="login-btn rounded-full text-white transition">
-              Login
+              search
             </button>
             <button className="signup-btn">
               Sign Up
