@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Autoplay, Navigation } from "swiper/modules";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -83,8 +83,8 @@ function NFTCarousel() {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        spaceBetween={50}
-        slidesPerView="auto"
+        spaceBetween={10}
+        slidesPerView={3}
         speed={1000}
         autoplay={{
           delay: 1000,
@@ -92,11 +92,24 @@ function NFTCarousel() {
         }}
         coverflowEffect={{
           rotate: 0,
-        //   stretch: 180,
-        //   depth: 300,
-        //   modifier: 2.4,
-          slideShadows: true,
-          scale: 0.82,
+          slideShadows: false,
+          scale: 0.8,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+        }}
+        breakpoints={{
+          768: {
+            slidesPerView: 'auto',
+            spaceBetween: 50,
+            effect: 'coverflow',
+            centeredSlides: true,
+            coverflowEffect: {
+              rotate: 0,
+              slideShadows: true,
+              scale: 0.82,
+            },
+          },
         }}
         className="nft-swiper"
       >
