@@ -3,7 +3,7 @@ import Hero from "../components/Hero.jsx";
 
 import  SponsorsCarousel from "../components/Sponsor.jsx";
 import TopSellers from "../components/TopSellers.jsx";
-import TrendingNft from "../components/TreandingNft.jsx";
+import NFTCarousel from "../components/TreandingNft.jsx";
 
 
 function LandingPage() {
@@ -37,7 +37,7 @@ function LandingPage() {
         <Hero />
         <SponsorsCarousel />
         <TopSellers />
-        <TrendingNft />
+        <NFTCarousel />
       </div>
 
     </section>
