@@ -3,112 +3,51 @@ import { EffectCoverflow, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import './style/nftCarousel.css'
-
-const cards = [
-  {
-    image: "https://images.unsplash.com/photo-1634973357973-f2ed2657db3c?q=80&w=1000",
-    title: "Digital Decade",
-    creator: "Anthony Gargasz",
-    likes: "50K",
-    price: "2.45 ETH",
-    accent: "#00f5ff",   // cyan
-  },
-  {
-    image: "https://images.unsplash.com/photo-1635322966219-b75ed372eb01?q=80&w=1000",
-    title: "Winter Jamz",
-    creator: "Antoi Tudisco",
-    likes: "47K",
-    price: "2.31 ETH",
-    accent: "#ff2e9f",   // pink
-  },
-  {
-    image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000",
-    title: "Pastel Wifey",
-    creator: "Jake Kythyn",
-    likes: "44K",
-    price: "1.92 ETH",
-    accent: "#a855f7",   // purple
-  },
-  {
-    image: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f9?q=80&w=1000",
-    title: "Versace",
-    creator: "Antoi Tudisco",
-    likes: "48K",
-    price: "2.45 ETH",
-    accent: "#eab308",   // yellow
-  },
-  {
-    image: "https://images.unsplash.com/photo-1638803040283-7a5ffd48dad5?q=80&w=1000",
-    title: "Cyber Punk",
-    creator: "Costa",
-    likes: "39K",
-    price: "1.95 ETH",
-    accent: "#22d3ee",   // teal
-  },
-  {
-    image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000",
-    title: "Pastel Wifey",
-    creator: "Jake Kythyn",
-    likes: "44K",
-    price: "1.92 ETH",
-    accent: "#a855f7",   // purple
-  },
-  {
-    image: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f9?q=80&w=1000",
-    title: "Versace",
-    creator: "Antoi Tudisco",
-    likes: "48K",
-    price: "2.45 ETH",
-    accent: "#eab308",   // yellow
-  },
-  {
-    image: "https://images.unsplash.com/photo-1638803040283-7a5ffd48dad5?q=80&w=1000",
-    title: "Cyber Punk",
-    creator: "Costa",
-    likes: "39K",
-    price: "1.95 ETH",
-    accent: "#22d3ee",   // teal
-  },
-];
+import './style/nftCarousel.css';
 
 function NFTCarousel() {
   return (
     <section className="nft-section">
-      {/* No background added as requested */}
-
       <Swiper
         modules={[EffectCoverflow, Autoplay]}
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        spaceBetween={10}
-        slidesPerView={3}
-        speed={1000}
+        spaceBetween={15}
+        slidesPerView={3}           // Show 3 cards on mobile
+        speed={900}
         autoplay={{
-          delay: 1000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         coverflowEffect={{
           rotate: 0,
+          stretch: 10,
+          depth: 80,
+          modifier: 1.2,
           slideShadows: false,
-          scale: 0.8,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
+          scale: 0.92,
         }}
         breakpoints={{
+          320: {
+            slidesPerView: 3,
+            spaceBetween: 12,
+            coverflowEffect: { depth: 60, scale: 0.88 },
+          },
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 14,
+          },
           768: {
-            slidesPerView: 'auto',
-            spaceBetween: 50,
-            effect: 'coverflow',
-            centeredSlides: true,
-            coverflowEffect: {
-              rotate: 0,
-              slideShadows: true,
-              scale: 0.82,
-            },
+            slidesPerView: 3,
+            spaceBetween: 25,
+            coverflowEffect: { depth: 100, scale: 0.85 },
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+            coverflowEffect: { depth: 120, scale: 0.82 },
           },
         }}
         className="nft-swiper"
@@ -117,9 +56,7 @@ function NFTCarousel() {
           <SwiperSlide key={index} className="nft-slide">
             <div 
               className="nft-card"
-              style={{
-                "--accent": card.accent,
-              }}
+              style={{ "--accent": card.accent }}
             >
               <div className="nft-image-wrapper">
                 <img src={card.image} alt={card.title} />
@@ -136,7 +73,7 @@ function NFTCarousel() {
                 </div>
 
                 <div className="nft-bottom">
-                  <span>❤️ {card.likes}</span>
+                  ❤️ {card.likes}
                 </div>
               </div>
             </div>
@@ -146,5 +83,3 @@ function NFTCarousel() {
     </section>
   );
 }
-
-export default NFTCarousel;
