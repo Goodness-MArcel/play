@@ -83,3 +83,50 @@ function NFTCarousel() {
     </section>
   );
 }
+
+
+const cards = [
+  {
+    image: "/images/img1.png",
+    title: "Mystic Forest",
+    creator: "Alice",
+    price: "2.5 ETH",
+    likes: 120,
+    accent: "#FF6B6B",
+  },
+  {
+    image: "/images/img2.png",
+    title: "Cyber City",
+    creator: "Bob",
+    price: "3.1 ETH",
+    likes: 95,
+    accent: "#6BCB77",
+  },
+  {
+    image: "/images/img3.png",
+    title: "Galactic Voyage",
+    creator: "Charlie",
+    price: "1.8 ETH",
+    likes: 150,
+    accent: "#4D96FF",
+  },
+  {
+    image: "/images/img4.png",
+    title: "Pixel Paradise",
+    creator: "Diana",
+    price: "2.2 ETH",
+    likes: 80,
+    accent: "#F7B801",
+  },
+  {
+    image: "/images/img5.png",
+    title: "Ethereal Dreams",
+    creator: "Eve",
+    price: "3.5 ETH",
+    likes: 200,
+    accent: "#9D4EDD",
+  },
+];
+
+
+export default NFTCarousel;
