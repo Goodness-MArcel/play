@@ -134,8 +134,13 @@ function Navbar() {
             <button className="login-btn rounded-full text-white transition">
               Login
             </button>
-            <button className="signup-btn w-full">
+            {/* <button className="signup-btn w-full">
               Sign Up
+            </button> */}
+             <button className="signup-btn w-full" 
+             onClick={() => navigate('/signup')}
+            >
+              sign up
             </button>
           </div>
         </div>
