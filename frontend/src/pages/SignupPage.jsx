@@ -7,7 +7,6 @@ function SignupPage() {
     username: '',
     email: '',
     password: '',
-    confirmPassword: '',
     walletAddress: '',
     displayName: '',
     bio: '',
@@ -36,45 +35,26 @@ function SignupPage() {
 
   return (
     <div className="min-h-screen bg-[#050816] text-white overflow-hidden relative">
-      {/* Background Glow Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#3BA3FF]/10 via-transparent to-[#8ea2ff]/10" />
-      <div className="absolute top-20 -left-40 w-[600px] h-[600px] bg-[#5f7dff]/20 rounded-full blur-[120px]" />
-      <div className="absolute bottom-20 -right-40 w-[600px] h-[600px] bg-[#8ea2ff]/20 rounded-full blur-[120px]" />
+      {/* Background Glows - Kept subtle */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#3BA3FF]/5 via-transparent to-[#8ea2ff]/5" />
 
       <div className="max-w-2xl mx-auto relative z-10 min-h-screen flex flex-col">
-        {/* Top Navigation */}
+        
+        {/* Simple Top Bar */}
         <div className="flex items-center justify-between p-6">
-          <a href="/" className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-gradient-to-br from-[#5f7dff] to-[#8ea2ff] rounded-2xl flex items-center justify-center text-white font-bold text-3xl">
-              P
-            </div>
-            <span 
-              className="text-2xl sm:text-3xl font-bold tracking-widest" 
-              style={{ fontFamily: 'redhawk' }}
-            >
-              PLAY<span className="text-[#5f7dff]">NFT</span>
-            </span>
-          </a>
           <a href="/" className="text-[#8ea2ff] hover:text-white flex items-center gap-2 text-sm sm:text-base">
             <ArrowLeft size={18} /> Back to Home
           </a>
+          <div className="text-xl font-bold tracking-widest text-white/80">
+            Sign Up
+          </div>
         </div>
 
         <div className="flex-1 flex items-center justify-center p-4 sm:p-6">
-          <div className="w-full max-w-xl">   {/* ← Wider form */}
+          <div className="w-full max-w-xl">
 
-            {/* Header */}
-            <div className="text-center mb-10">
-              <h1 className="text-4xl sm:text-5xl font-bold mb-3">
-                Join the Future
-              </h1>
-              <p className="text-[#8ea2ff] text-base sm:text-lg">
-                Create your PLAY NFT account in 3 simple steps
-              </p>
-            </div>
-
-            {/* Progress */}
-            <div className="mb-12">
+            {/* Progress Bar */}
+            <div className="mb-10">
               <div className="flex justify-between text-xs sm:text-sm mb-3 px-1">
                 {['Account Info', 'Connect Wallet', 'Complete Profile'].map((label, index) => (
                   <div
@@ -93,18 +73,19 @@ function SignupPage() {
               </div>
             </div>
 
-            {/* Step Forms - Wider & Better Mobile Spacing */}
-            <div className="bg-[#0b1330] border border-[#2d4fff]/40 rounded-3xl p-6 sm:p-10">
+            {/* Form Container - Cleaner & Simpler */}
+            <div className="bg-[#0b1330] border border-[#2d4fff]/30 rounded-3xl p-6 sm:p-10">
+
               {currentStep === 1 && (
                 <div className="space-y-6">
                   <div>
                     <label className="block text-[#8ea2ff] text-sm mb-2">Username</label>
                     <input
                       type="text"
-                      placeholder="@creativeartist"
+                      placeholder="@username"
                       value={formData.username}
                       onChange={(e) => updateForm('username', e.target.value)}
-                      className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#5f7dff] text-base sm:text-lg"
+                      className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#5f7dff]"
                     />
                   </div>
 
@@ -115,7 +96,7 @@ function SignupPage() {
                       placeholder="you@example.com"
                       value={formData.email}
                       onChange={(e) => updateForm('email', e.target.value)}
-                      className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#5f7dff] text-base sm:text-lg"
+                      className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#5f7dff]"
                     />
                   </div>
 
@@ -126,34 +107,26 @@ function SignupPage() {
                       placeholder="••••••••"
                       value={formData.password}
                       onChange={(e) => updateForm('password', e.target.value)}
-                      className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#5f7dff] text-base sm:text-lg"
+                      className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#5f7dff]"
                     />
                   </div>
                 </div>
               )}
 
               {currentStep === 2 && (
-                <div className="text-center py-12">
-                  <div className="mx-auto w-20 h-20 sm:w-24 sm:h-24 bg-[#1a254f] rounded-3xl flex items-center justify-center mb-8">
-                    <Wallet size={50} className="sm:size-60 text-[#5f7dff]" />
+                <div className="text-center py-16">
+                  <div className="mx-auto w-20 h-20 bg-[#1a254f] rounded-3xl flex items-center justify-center mb-6">
+                    <Wallet size={48} className="text-[#5f7dff]" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold mb-3">Connect Your Wallet</h3>
-                  <p className="text-[#8ea2ff] mb-10 max-w-xs mx-auto text-sm sm:text-base">
-                    Connect your wallet to buy, sell, and securely store your NFTs
-                  </p>
+                  <h3 className="text-2xl font-semibold mb-2">Connect Your Wallet</h3>
+                  <p className="text-[#8ea2ff] mb-10">Link your wallet to continue</p>
 
                   <button
                     onClick={() => updateForm('walletAddress', '0x742d35Cc6634C0532925a3b8D7F5a8f3e8d2')}
-                    className="w-full py-5 bg-gradient-to-r from-[#5f7dff] to-[#8ea2ff] rounded-2xl text-lg sm:text-xl font-semibold hover:scale-105 transition-all duration-300"
+                    className="w-full py-4 bg-gradient-to-r from-[#5f7dff] to-[#8ea2ff] rounded-2xl font-semibold text-lg hover:scale-105 transition-all"
                   >
                     Connect Wallet
                   </button>
-
-                  {formData.walletAddress && (
-                    <p className="mt-6 text-green-400 font-medium text-sm">
-                      ✅ Wallet Connected: {formData.walletAddress.slice(0, 6)}...{formData.walletAddress.slice(-4)}
-                    </p>
-                  )}
                 </div>
               )}
 
@@ -166,22 +139,22 @@ function SignupPage() {
                       placeholder="Alex Rivera"
                       value={formData.displayName}
                       onChange={(e) => updateForm('displayName', e.target.value)}
-                      className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#5f7dff] text-base sm:text-lg"
+                      className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#5f7dff]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[#8ea2ff] text-sm mb-2">Bio</label>
+                    <label className="block text-[#8ea2ff] text-sm mb-2">Bio (Optional)</label>
                     <textarea
-                      placeholder="Digital artist & NFT collector | Passionate about 3D worlds"
+                      placeholder="Tell us a bit about yourself..."
                       value={formData.bio}
                       onChange={(e) => updateForm('bio', e.target.value)}
-                      className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-4 h-28 resize-y focus:outline-none focus:border-[#5f7dff] text-base sm:text-lg"
+                      className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-4 h-24 resize-y focus:outline-none focus:border-[#5f7dff]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[#8ea2ff] text-sm mb-3">What are you interested in?</label>
+                    <label className="block text-[#8ea2ff] text-sm mb-3">Interests (Optional)</label>
                     <div className="grid grid-cols-2 gap-3">
                       {interestsOptions.map((interest) => (
                         <button
@@ -192,7 +165,7 @@ function SignupPage() {
                               : [...formData.interests, interest];
                             updateForm('interests', newInterests);
                           }}
-                          className={`px-4 sm:px-5 py-3 rounded-2xl text-sm transition-all ${
+                          className={`px-4 py-3 rounded-2xl text-sm transition-all ${
                             formData.interests.includes(interest)
                               ? 'bg-[#5f7dff] text-white'
                               : 'bg-[#1a254f] hover:bg-[#2a3b7f] text-[#8ea2ff]'
@@ -220,16 +193,16 @@ function SignupPage() {
               {currentStep < 3 ? (
                 <button
                   onClick={nextStep}
-                  className="flex items-center gap-2 bg-gradient-to-r from-[#5f7dff] to-[#8ea2ff] px-8 sm:px-10 py-3 rounded-2xl font-semibold hover:scale-105 transition-all text-sm sm:text-base"
+                  className="flex items-center gap-2 bg-gradient-to-r from-[#5f7dff] to-[#8ea2ff] px-10 py-3 rounded-2xl font-semibold hover:scale-105 transition-all"
                 >
                   Continue <ArrowRight size={20} />
                 </button>
               ) : (
                 <button
                   onClick={handleSubmit}
-                  className="flex items-center gap-2 bg-gradient-to-r from-[#5f7dff] to-[#8ea2ff] px-8 sm:px-10 py-3 rounded-2xl font-semibold hover:scale-105 transition-all text-sm sm:text-base"
+                  className="flex items-center gap-2 bg-gradient-to-r from-[#5f7dff] to-[#8ea2ff] px-10 py-3 rounded-2xl font-semibold hover:scale-105 transition-all"
                 >
-                  Create My Account <Check size={20} />
+                  Create Account <Check size={20} />
                 </button>
               )}
             </div>
