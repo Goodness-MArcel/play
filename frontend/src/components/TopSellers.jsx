@@ -69,7 +69,7 @@ function TopSellers() {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="flex justify-center mb-12">
-          <h2 className="text-white text-3xl md:text-5xl font-bold tracking-wide">
+          <h2 className="text-white text-3xl md:text-5xl font-bold tracking-wide" style={{ fontFamily: "Redhawk" }}>
             Top Sellers
           </h2>
         </div>

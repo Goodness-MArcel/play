@@ -78,7 +78,7 @@ function ExploreArtworks() {
       <div className="max-w-7xl mx-auto relative">
         {/* Title */}
         <div className="flex justify-center mb-12">
-          <h2 className="text-white text-3xl md:text-5xl font-bold tracking-wide">
+          <h2 className="text-white text-3xl md:text-5xl font-bold tracking-wide" style={{ fontFamily: "Redhawk" }}>
             Explore Artworks
           </h2>
         </div>
@@ -118,7 +118,7 @@ function ExploreArtworks() {
         </div>
 
         {/* Join Us Banner - matching the image's rounded purple/blue button area */}
-        <div className="mt-16 mx-auto max-w-3xl">
+        <div className="mt-16 mx-auto max-w-3xl overflow-hidden rounded-tl-[30%] rounded-br-[30%]" style={{ fontFamily: "Redhawk"}}>
           <div className="bg-gradient-to-r from-[#1e2a5e] via-[#2a3b7f] to-[#1e2a5e] rounded-[40px] p-10 text-center border border-[#5f7dff]/30 shadow-xl">
             <h3 className="text-white text-2xl md:text-3xl font-semibold mb-3 tracking-wide">
               Join Us to Create Sell and
