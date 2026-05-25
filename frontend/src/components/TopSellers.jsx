@@ -123,7 +123,7 @@ function TopSellers() {
                 <h3 className="text-white font-semibold text-base">
                   {seller.name}
                 </h3>
-
+                
                 <p className="text-[#8ea2ff] mt-1 text-sm">
                   {seller.amount}
                 </p>

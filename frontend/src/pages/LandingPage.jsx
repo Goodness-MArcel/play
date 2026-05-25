@@ -4,6 +4,7 @@ import Hero from "../components/Hero.jsx";
 import  SponsorsCarousel from "../components/Sponsor.jsx";
 import TopSellers from "../components/TopSellers.jsx";
 import NFTCarousel from "../components/TreandingNft.jsx";
+import ExploreArtworks from "../components/ExploreArtworks.jsx";
 
 
 function LandingPage() {
@@ -39,6 +40,7 @@ function LandingPage() {
         
         <NFTCarousel />
         <TopSellers />
+        <ExploreArtworks/>
       </div>
 
     </section>
