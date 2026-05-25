@@ -8,6 +8,7 @@ import './style/nftCarousel.css';
 function NFTCarousel() {
   return (
     <section className="nft-section">
+      <h3>popular this week</h3>
       <Swiper
         modules={[EffectCoverflow, Autoplay]}
         effect="coverflow"

@@ -36,8 +36,9 @@ function LandingPage() {
         <Navbar />
         <Hero />
         <SponsorsCarousel />
-        <TopSellers />
+        
         <NFTCarousel />
+        <TopSellers />
       </div>
 
     </section>
