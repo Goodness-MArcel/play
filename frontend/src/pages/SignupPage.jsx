@@ -236,12 +236,12 @@ function SignupPage() {
                   Continue <ArrowRight size={20} />
                 </button>
               ) : (
-                <button
-                  onClick={handleSubmit}
-                  className="flex items-center gap-2 bg-gradient-to-r from-[#5f7dff] to-[#8ea2ff] px-10 py-3 rounded-2xl font-semibold hover:scale-105 transition-all text-base sm:text-lg"
-                >
-                  Create Account 
-                </button>
+               <button
+  onClick={handleSubmit}
+  className="flex items-center gap-2 bg-gradient-to-r from-[#5f7dff] to-[#8ea2ff] px-10 py-3 rounded-2xl font-semibold hover:scale-105 transition-all text-base sm:text-lg whitespace-nowrap"
+>
+  Create Account 
+</button>
               )}
             </div>
           </div>
