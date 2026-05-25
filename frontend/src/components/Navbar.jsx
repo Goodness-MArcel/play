@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -33,8 +35,10 @@ function Navbar() {
             <button className="login-btn rounded-full text-white transition">
               search
             </button>
-            <button className="signup-btn">
-              Sign Up
+            <button className="signup-btn" 
+             onClick={() => navigate('/signup')}
+            >
+              sign up
             </button>
           </div>
         </div>
