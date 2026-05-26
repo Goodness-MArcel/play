@@ -3,59 +3,67 @@ import { Settings, Copy, Mail, MapPin, Calendar, Link as LinkIcon, Users, Award,
 
 function MyProfile() {
   return (
-    <div className="space-y-6 sm:space-y-8 overflow-hidden">
+    <div className="max-w-7xl mx-auto space-y-6 md:space-y-8">
       {/* Profile Header */}
-      <div className="bg-[#0b1330] border border-[#2d4fff]/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8">
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-          {/* Avatar Section */}
-          <div className="flex flex-col items-center md:items-start">
-            <div className="relative">
-              <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-[#5f7dff] to-[#8ea2ff] rounded-3xl flex items-center justify-center text-4xl sm:text-5xl">
-                👨‍🎨
-              </div>
-              <button className="absolute bottom-0 right-0 bg-[#5f7dff] p-1.5 sm:p-2 rounded-xl hover:bg-[#4a68e0] transition-colors">
-                <Edit2 size={14} className="sm:w-4 sm:h-4 text-white" />
-              </button>
-            </div>
-            <button className="mt-4 text-[#5f7dff] text-xs sm:text-sm hover:underline">Change Avatar</button>
-          </div>
-
-          {/* Profile Info */}
-          <div className="flex-1">
-            <div className="flex flex-wrap items-start justify-between gap-4">
-              <div>
-                <div className="flex items-center gap-2 flex-wrap">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">Alex Morgan</h1>
-                  <span className="px-2 py-1 bg-[#5f7dff]/10 text-[#5f7dff] text-xs sm:text-sm rounded-full">Verified Collector</span>
+      <div className="bg-[#0b1330] border border-[#2d4fff]/30 rounded-3xl overflow-hidden">
+        <div className="p-6 md:p-8">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+            {/* Avatar */}
+            <div className="flex flex-col items-center md:items-start flex-shrink-0">
+              <div className="relative">
+                <div className="w-28 h-28 md:w-32 md:h-32 bg-gradient-to-br from-[#5f7dff] to-[#8ea2ff] rounded-3xl flex items-center justify-center text-5xl shadow-xl">
+                  👨‍🎨
                 </div>
-                <div className="flex items-center gap-2 mt-2">
-                  <span className="text-[#8ea2ff] text-sm sm:text-base">@alexmorgan</span>
-                  <button className="text-[#8ea2ff] hover:text-[#5f7dff] transition">
-                    <Copy size={14} className="sm:w-4 sm:h-4" />
-                  </button>
-                </div>
-                <p className="text-[#8ea2ff] text-sm sm:text-base mt-3 max-w-2xl">
-                  Digital art collector & NFT enthusiast. Exploring the intersection of art and blockchain since 2021.
-                </p>
+                <button className="absolute -bottom-1 -right-1 bg-[#5f7dff] p-2 rounded-xl hover:bg-[#4a68e0] transition-all">
+                  <Edit2 size={18} className="text-white" />
+                </button>
               </div>
-              <button className="px-4 py-2 bg-[#5f7dff] hover:bg-[#4a68e0] rounded-xl text-white text-sm sm:text-base font-medium transition-colors flex items-center gap-2">
-                <Settings size={16} className="sm:w-4 sm:h-4" /> Edit Profile
-              </button>
+              <button className="mt-4 text-[#5f7dff] text-sm hover:underline">Change Avatar</button>
             </div>
 
-            {/* Contact Info Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 pt-6 border-t border-[#2d4fff]/20">
-              <div className="flex items-center gap-2 text-[#8ea2ff] text-xs sm:text-sm">
-                <Mail size={14} className="sm:w-4 sm:h-4" /> alex.morgan@example.com
+            {/* Profile Info */}
+            <div className="flex-1">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                <div>
+                  <div className="flex items-center gap-3">
+                    <h1 className="text-3xl md:text-4xl font-bold">Alex Morgan</h1>
+                    <span className="px-3 py-1 bg-[#5f7dff]/10 text-[#5f7dff] text-sm rounded-full font-medium">Verified</span>
+                  </div>
+                  <div className="flex items-center gap-2 mt-2">
+                    <span className="text-[#8ea2ff]">@alexmorgan</span>
+                    <button className="text-[#8ea2ff] hover:text-white transition">
+                      <Copy size={18} />
+                    </button>
+                  </div>
+                  <p className="text-[#8ea2ff] mt-3 leading-relaxed">
+                    Digital art collector & NFT enthusiast. Passionate about 3D worlds and generative art.
+                  </p>
+                </div>
+
+                <button className="px-5 py-2.5 bg-[#5f7dff] hover:bg-[#4a68e0] rounded-2xl text-white font-medium flex items-center gap-2 transition self-start">
+                  <Settings size={18} />
+                  Edit Profile
+                </button>
               </div>
-              <div className="flex items-center gap-2 text-[#8ea2ff] text-xs sm:text-sm">
-                <MapPin size={14} className="sm:w-4 sm:h-4" /> New York, USA
-              </div>
-              <div className="flex items-center gap-2 text-[#8ea2ff] text-xs sm:text-sm">
-                <Calendar size={14} className="sm:w-4 sm:h-4" /> Joined March 2022
-              </div>
-              <div className="flex items-center gap-2 text-[#8ea2ff] text-xs sm:text-sm">
-                <LinkIcon size={14} className="sm:w-4 sm:h-4" /> alexmorgan.art
+
+              {/* Contact Info */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-6 border-t border-[#2d4fff]/20">
+                <div className="flex items-center gap-3 text-[#8ea2ff]">
+                  <Mail size={20} />
+                  <span>alex@example.com</span>
+                </div>
+                <div className="flex items-center gap-3 text-[#8ea2ff]">
+                  <MapPin size={20} />
+                  <span>New York, USA</span>
+                </div>
+                <div className="flex items-center gap-3 text-[#8ea2ff]">
+                  <Calendar size={20} />
+                  <span>Joined March 2022</span>
+                </div>
+                <div className="flex items-center gap-3 text-[#8ea2ff]">
+                  <LinkIcon size={20} />
+                  <span>alexmorgan.art</span>
+                </div>
               </div>
             </div>
           </div>
@@ -63,73 +71,39 @@ function MyProfile() {
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        <div className="bg-[#0b1330] border border-[#2d4fff]/30 rounded-2xl sm:rounded-3xl p-4 sm:p-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-[#8ea2ff] text-xs sm:text-sm">Total NFTs</p>
-              <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-1 sm:mt-2">248</p>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        {[
+          { label: "Total NFTs", value: "248", change: "+12 this month", icon: <Award size={28} />, color: "text-[#5f7dff]" },
+          { label: "Total Volume", value: "127.5 ETH", change: "All-time sales", icon: "💰" },
+          { label: "Followers", value: "2.8K", change: "+184 this week", icon: <Users size={28} />, color: "text-[#5f7dff]" },
+          { label: "Profile Views", value: "15.2K", change: "This month", icon: <Eye size={28} />, color: "text-amber-400" },
+        ].map((stat, i) => (
+          <div key={i} className="bg-[#0b1330] border border-[#2d4fff]/30 rounded-3xl p-6">
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="text-[#8ea2ff] text-sm">{stat.label}</p>
+                <p className="text-4xl font-bold mt-3">{stat.value}</p>
+              </div>
+              <div className={`w-12 h-12 bg-[#5f7dff]/10 rounded-2xl flex items-center justify-center ${stat.color || ''}`}>
+                {stat.icon}
+              </div>
             </div>
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#5f7dff]/10 rounded-xl sm:rounded-2xl flex items-center justify-center">
-              <Award size={24} className="sm:w-7 sm:h-7 text-[#5f7dff]" />
-            </div>
+            <p className="text-green-400 text-sm mt-4">{stat.change}</p>
           </div>
-          <p className="text-green-400 text-xs sm:text-sm mt-3 sm:mt-4 flex items-center gap-1">
-            <TrendingUp size={14} className="sm:w-4 sm:h-4" /> +12 this month
-          </p>
-        </div>
-
-        <div className="bg-[#0b1330] border border-[#2d4fff]/30 rounded-2xl sm:rounded-3xl p-4 sm:p-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-[#8ea2ff] text-xs sm:text-sm">Total Volume</p>
-              <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-1 sm:mt-2">127.5 ETH</p>
-            </div>
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#5f7dff]/10 rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-2xl">
-              💰
-            </div>
-          </div>
-          <p className="text-green-400 text-xs sm:text-sm mt-3 sm:mt-4">All-time sales</p>
-        </div>
-
-        <div className="bg-[#0b1330] border border-[#2d4fff]/30 rounded-2xl sm:rounded-3xl p-4 sm:p-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-[#8ea2ff] text-xs sm:text-sm">Followers</p>
-              <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-1 sm:mt-2">2,847</p>
-            </div>
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#5f7dff]/10 rounded-xl sm:rounded-2xl flex items-center justify-center">
-              <Users size={24} className="sm:w-7 sm:h-7 text-[#5f7dff]" />
-            </div>
-          </div>
-          <p className="text-[#8ea2ff] text-xs sm:text-sm mt-3 sm:mt-4">+184 this week</p>
-        </div>
-
-        <div className="bg-[#0b1330] border border-[#2d4fff]/30 rounded-2xl sm:rounded-3xl p-4 sm:p-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-[#8ea2ff] text-xs sm:text-sm">Profile Views</p>
-              <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-1 sm:mt-2">15.2K</p>
-            </div>
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#5f7dff]/10 rounded-xl sm:rounded-2xl flex items-center justify-center">
-              <Eye size={24} className="sm:w-7 sm:h-7 text-[#5f7dff]" />
-            </div>
-          </div>
-          <p className="text-amber-400 text-xs sm:text-sm mt-3 sm:mt-4">This month</p>
-        </div>
+        ))}
       </div>
 
-      {/* Tabs Section */}
-      <div className="bg-[#0b1330] border border-[#2d4fff]/30 rounded-2xl sm:rounded-3xl overflow-hidden">
-        <div className="border-b border-[#2d4fff]/20 px-4 sm:px-6">
-          <div className="flex gap-4 sm:gap-6 overflow-x-auto">
+      {/* Tabs & Collection */}
+      <div className="bg-[#0b1330] border border-[#2d4fff]/30 rounded-3xl overflow-hidden">
+        <div className="border-b border-[#2d4fff]/20 px-6">
+          <div className="flex gap-6 overflow-x-auto">
             {["Collection", "Created", "Favorites", "Activity"].map((tab, i) => (
               <button
                 key={i}
-                className={`px-2 py-3 sm:py-4 text-sm sm:text-base font-medium transition-colors whitespace-nowrap ${
-                  i === 0
-                    ? "text-[#5f7dff] border-b-2 border-[#5f7dff]"
-                    : "text-[#8ea2ff] hover:text-white"
+                className={`py-5 font-medium whitespace-nowrap border-b-2 transition-all ${
+                  i === 0 
+                    ? "text-white border-[#5f7dff]" 
+                    : "text-[#8ea2ff] border-transparent hover:text-white"
                 }`}
               >
                 {tab}
@@ -138,62 +112,27 @@ function MyProfile() {
           </div>
         </div>
 
-        {/* NFT Grid - Collection Tab */}
-        <div className="p-4 sm:p-6">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+        {/* NFT Grid */}
+        <div className="p-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {[
-              { name: "Cosmic Dreamer", id: "#421", price: "2.45 ETH", image: "🌌" },
-              { name: "Neon Samurai", id: "#89", price: "5.8 ETH", image: "⚔️" },
-              { name: "Pixel Goddess", id: "#12", price: "3.2 ETH", image: "👸" },
-              { name: "Eternal Bloom", id: "#56", price: "1.8 ETH", image: "🌸" },
-              { name: "Cyber Legends", id: "#234", price: "4.2 ETH", image: "🤖" },
-              { name: "Neon Abyss", id: "#77", price: "2.9 ETH", image: "🌃" },
-              { name: "Astral Voyagers", id: "#101", price: "6.1 ETH", image: "🪐" },
-              { name: "Digital Dreams", id: "#88", price: "1.5 ETH", image: "✨" },
+              { name: "Cosmic Dreamer", id: "#421", price: "2.45 ETH", emoji: "🌌" },
+              { name: "Neon Samurai", id: "#89", price: "5.8 ETH", emoji: "⚔️" },
+              { name: "Pixel Goddess", id: "#12", price: "3.2 ETH", emoji: "👸" },
+              { name: "Eternal Bloom", id: "#56", price: "1.8 ETH", emoji: "🌸" },
             ].map((nft, i) => (
-              <div
-                key={i}
-                className="bg-[#0a1030] border border-[#2d4fff]/30 rounded-xl sm:rounded-2xl overflow-hidden hover:border-[#5f7dff] transition-all cursor-pointer group"
-              >
-                <div className="h-32 sm:h-40 bg-gradient-to-br from-[#5f7dff]/20 to-[#8ea2ff]/10 flex items-center justify-center text-5xl sm:text-6xl">
-                  {nft.image}
+              <div key={i} className="bg-[#0a1030] border border-[#2d4fff]/30 rounded-2xl overflow-hidden hover:border-[#5f7dff] transition group cursor-pointer">
+                <div className="h-48 flex items-center justify-center text-6xl bg-gradient-to-br from-[#5f7dff]/10 to-[#8ea2ff]/10">
+                  {nft.emoji}
                 </div>
-                <div className="p-3 sm:p-4">
-                  <p className="text-sm sm:text-base font-semibold group-hover:text-[#5f7dff] transition">
-                    {nft.name} <span className="text-[#8ea2ff] text-xs sm:text-sm">{nft.id}</span>
-                  </p>
-                  <p className="text-xs sm:text-sm text-[#5f7dff] mt-2 font-medium">{nft.price}</p>
+                <div className="p-4">
+                  <p className="font-semibold group-hover:text-[#5f7dff] transition">{nft.name}</p>
+                  <p className="text-[#8ea2ff] text-sm">{nft.id}</p>
+                  <p className="text-[#5f7dff] font-medium mt-2">{nft.price}</p>
                 </div>
               </div>
             ))}
           </div>
-
-          {/* View More Button */}
-          <div className="text-center mt-6 sm:mt-8">
-            <button className="px-6 py-2 sm:px-8 sm:py-3 border border-[#2d4fff]/50 hover:border-[#5f7dff] rounded-xl text-[#8ea2ff] hover:text-white text-sm sm:text-base transition-colors">
-              View All Collection →
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Recent Achievements */}
-      <div className="bg-[#0b1330] border border-[#2d4fff]/30 rounded-2xl sm:rounded-3xl p-4 sm:p-6">
-        <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Recent Achievements 🏆</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-          {[
-            { title: "Early Adopter", desc: "Joined in 2022", icon: "🚀" },
-            { title: "Collection Master", desc: "Own 200+ NFTs", icon: "👑" },
-            { title: "Top Collector", desc: "Top 5% collectors", icon: "💎" },
-          ].map((achievement, i) => (
-            <div key={i} className="flex items-center gap-3 p-3 sm:p-4 bg-[#0a1030] rounded-xl sm:rounded-2xl border border-[#2d4fff]/20">
-              <div className="text-3xl sm:text-4xl">{achievement.icon}</div>
-              <div>
-                <p className="text-sm sm:text-base font-semibold">{achievement.title}</p>
-                <p className="text-[10px] sm:text-xs text-[#8ea2ff]">{achievement.desc}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </div>
