@@ -14,6 +14,7 @@ import Wallet from '../user/Wallet';
 import MyNFTs from '../user/MyNFTs';
 import MyProfile from '../user/Profile';
 import Settings from '../user/Settings';
+import Favorites from '../user/Favorites';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           
           {/* Add more dashboard pages here later */}
           <Route path="profile" element={<MyProfile />} />
+          <Route path="favorites" element={<Favorites />} /> 
           <Route path="settings" element={<Settings/>} />
         </Route>
 

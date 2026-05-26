@@ -28,7 +28,6 @@ function MyNFTs() {
         </div>
 
         <div className="flex items-center gap-3">
-          {/* Upload Button */}
           <button
             onClick={() => setShowUploadModal(true)}
             className="flex items-center gap-2 bg-[#5f7dff] hover:bg-[#4a68e0] px-5 py-3 rounded-2xl text-white font-medium transition-all active:scale-95"
@@ -37,7 +36,6 @@ function MyNFTs() {
             <span>Upload NFT</span>
           </button>
 
-          {/* View Toggle */}
           <div className="flex gap-1 bg-[#0b1330] border border-[#2d4fff]/40 rounded-2xl p-1">
             <button
               onClick={() => setViewMode('grid')}
@@ -92,57 +90,63 @@ function MyNFTs() {
         ))}
       </div>
 
-      {/* Upload NFT Modal */}
+      {/* Upload NFT Modal - Optimized for Mobile */}
       {showUploadModal && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-xl z-[100] flex items-center justify-center p-4">
-          <div className="bg-[#0b1330] border border-[#2d4fff]/40 rounded-3xl w-full max-w-lg">
-            <div className="flex items-center justify-between p-6 border-b border-[#2d4fff]/20">
-              <h3 className="text-2xl font-semibold">Upload New NFT</h3>
-              <button onClick={() => setShowUploadModal(false)} className="text-[#8ea2ff] hover:text-white">
-                <X size={28} />
+          <div className="bg-[#0b1330] border border-[#2d4fff]/40 rounded-3xl w-full max-w-lg max-h-[90vh] overflow-hidden flex flex-col">
+            
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-5 border-b border-[#2d4fff]/20">
+              <h3 className="text-xl sm:text-2xl font-semibold">Upload New NFT</h3>
+              <button 
+                onClick={() => setShowUploadModal(false)} 
+                className="text-[#8ea2ff] hover:text-white p-1"
+              >
+                <X size={26} />
               </button>
             </div>
 
-            <div className="p-6 space-y-6">
+            {/* Modal Body - Smaller fonts on mobile */}
+            <div className="p-5 sm:p-6 space-y-5 overflow-y-auto flex-1">
               {/* Upload Area */}
-              <div className="border-2 border-dashed border-[#2d4fff]/50 rounded-2xl h-64 flex flex-col items-center justify-center hover:border-[#5f7dff] transition cursor-pointer">
-                <ImageIcon size={48} className="text-[#5f7dff] mb-4" />
-                <p className="text-lg font-medium">Drag & Drop or Click to Upload</p>
-                <p className="text-[#8ea2ff] text-sm mt-1">PNG, JPG, GIF, WEBP up to 100MB</p>
+              <div className="border-2 border-dashed border-[#2d4fff]/50 rounded-2xl h-52 sm:h-64 flex flex-col items-center justify-center hover:border-[#5f7dff] transition cursor-pointer">
+                <ImageIcon size={40} className="text-[#5f7dff] mb-3" />
+                <p className="text-base sm:text-lg font-medium text-center">Drag & Drop or Click to Upload</p>
+                <p className="text-[#8ea2ff] text-xs sm:text-sm mt-1 text-center">PNG, JPG, GIF, WEBP up to 100MB</p>
               </div>
 
               {/* Form Fields */}
-              <div className="space-y-4">
+              <div className="space-y-5">
                 <div>
-                  <label className="block text-[#8ea2ff] text-sm mb-2">NFT Name</label>
+                  <label className="block text-[#8ea2ff] text-sm mb-1.5">NFT Name</label>
                   <input
                     type="text"
                     placeholder="e.g. Cosmic Dreamer #421"
-                    className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-3 focus:outline-none focus:border-[#5f7dff]"
+                    className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-[#5f7dff]"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[#8ea2ff] text-sm mb-2">Description</label>
+                  <label className="block text-[#8ea2ff] text-sm mb-1.5">Description</label>
                   <textarea
                     placeholder="Describe your NFT..."
                     rows={3}
-                    className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-3 focus:outline-none focus:border-[#5f7dff]"
+                    className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-[#5f7dff]"
                   />
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[#8ea2ff] text-sm mb-2">Price (ETH)</label>
+                    <label className="block text-[#8ea2ff] text-sm mb-1.5">Price (ETH)</label>
                     <input
                       type="text"
                       placeholder="0.00"
-                      className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-3 focus:outline-none focus:border-[#5f7dff]"
+                      className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-[#5f7dff]"
                     />
                   </div>
                   <div>
-                    <label className="block text-[#8ea2ff] text-sm mb-2">Collection</label>
-                    <select className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-5 py-3 focus:outline-none focus:border-[#5f7dff]">
+                    <label className="block text-[#8ea2ff] text-sm mb-1.5">Collection</label>
+                    <select className="w-full bg-[#050816] border border-[#2d4fff]/40 rounded-2xl px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-[#5f7dff]">
                       <option>Eternal Bloom</option>
                       <option>Cyber Legends</option>
                       <option>Astral Voyagers</option>
@@ -152,10 +156,11 @@ function MyNFTs() {
               </div>
             </div>
 
-            <div className="p-6 border-t border-[#2d4fff]/20 flex gap-3">
+            {/* Footer Buttons */}
+            <div className="p-5 border-t border-[#2d4fff]/20 flex gap-3">
               <button
                 onClick={() => setShowUploadModal(false)}
-                className="flex-1 py-3 border border-[#2d4fff]/40 rounded-2xl hover:bg-[#1a254f] transition"
+                className="flex-1 py-3.5 border border-[#2d4fff]/40 rounded-2xl hover:bg-[#1a254f] transition text-sm sm:text-base"
               >
                 Cancel
               </button>
@@ -164,7 +169,7 @@ function MyNFTs() {
                   alert("🎉 NFT uploaded successfully! (Demo)");
                   setShowUploadModal(false);
                 }}
-                className="flex-1 py-3 bg-gradient-to-r from-[#5f7dff] to-[#8ea2ff] rounded-2xl font-semibold hover:scale-105 transition"
+                className="flex-1 py-3.5 bg-gradient-to-r from-[#5f7dff] to-[#8ea2ff] rounded-2xl font-semibold hover:scale-105 transition text-sm sm:text-base"
               >
                 Upload NFT
               </button>
