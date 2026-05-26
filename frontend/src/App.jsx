@@ -13,6 +13,7 @@ import Dashboard from '../user/Dashboard';
 import Wallet from '../user/Wallet';
 import MyNFTs from '../user/MyNFTs';
 import MyProfile from '../user/Profile';
+import Settings from '../user/Settings';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           
           {/* Add more dashboard pages here later */}
           <Route path="profile" element={<MyProfile />} />
-          {/* <Route path="favorites" element={<Favorites />} /> */}
+          <Route path="settings" element={<Settings/>} />
         </Route>
 
         {/* 404 Route (Optional) */}
