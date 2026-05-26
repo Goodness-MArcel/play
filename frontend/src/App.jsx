@@ -12,6 +12,7 @@ import DashboardLayout from '../user/DashboardLayout';
 import Dashboard from '../user/Dashboard';
 import Wallet from '../user/Wallet';
 import MyNFTs from '../user/MyNFTs';
+import MyProfile from '../user/Profile';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
           <Route path="wallet" element={<Wallet />} />             {/* /dashboard/wallet */}
           
           {/* Add more dashboard pages here later */}
-          {/* <Route path="profile" element={<Profile />} /> */}
+          <Route path="profile" element={<MyProfile />} />
           {/* <Route path="favorites" element={<Favorites />} /> */}
         </Route>
 
