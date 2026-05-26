@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Wallet, ArrowLeft, ArrowRight, Check } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function SignupPage() {
+  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     username: "",
@@ -41,7 +43,7 @@ function SignupPage() {
     alert(
       "🎉 Welcome to PLAY NFT! Your account has been created successfully.",
     );
-    window.location.href = "/";
+    navigate('/dashboard');
   };
 
   return (
@@ -236,12 +238,12 @@ function SignupPage() {
                   Continue <ArrowRight size={20} />
                 </button>
               ) : (
-               <button
-  onClick={handleSubmit}
-  className="flex items-center gap-2 bg-gradient-to-r from-[#5f7dff] to-[#8ea2ff] px-10 py-3 rounded-2xl font-semibold hover:scale-105 transition-all text-base sm:text-lg whitespace-nowrap"
->
-  Create Account 
-</button>
+                <button
+                  onClick={handleSubmit}
+                  className="flex items-center gap-2 bg-gradient-to-r from-[#5f7dff] to-[#8ea2ff] px-10 py-3 rounded-2xl font-semibold hover:scale-105 transition-all text-base sm:text-lg whitespace-nowrap"
+                >
+                  Create Account
+                </button>
               )}
             </div>
           </div>

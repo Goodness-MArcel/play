@@ -4,22 +4,36 @@ import './index.css';
 
 // Pages
 import LandingPage from './pages/LandingPage';
-import SignupPage from './pages/SignupPage';   // ← Import your new signup page
+import SignupPage from './pages/SignupPage';
+
+// Dashboard Related
+// import DashboardLayout from './user/DashboardLayout';
+import DashboardLayout from '../user/DashboardLayout';
+import Dashboard from '../user/Dashboard';
+import Wallet from '../user/Wallet';
+import MyNFTs from '../user/MyNFTs';
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* Home / Landing Page */}
+        {/* Public Routes */}
         <Route path="/" element={<LandingPage />} />
-
-        {/* Sign Up Page */}
         <Route path="/signup" element={<SignupPage />} />
 
-        {/* You can add more routes later */}
-        {/* <Route path="/login" element={<LoginPage />} /> */}
-        {/* <Route path="/explore" element={<ExplorePage />} /> */}
-        {/* <Route path="/profile" element={<ProfilePage />} /> */}
+        {/* Protected Dashboard Routes with Layout */}
+        <Route path="/dashboard" element={<DashboardLayout />}>
+          <Route index element={<Dashboard />} />                    {/* Default: /dashboard */}
+          <Route path="nfts" element={<MyNFTs />} />               {/* /dashboard/nfts */}
+          <Route path="wallet" element={<Wallet />} />             {/* /dashboard/wallet */}
+          
+          {/* Add more dashboard pages here later */}
+          {/* <Route path="profile" element={<Profile />} /> */}
+          {/* <Route path="favorites" element={<Favorites />} /> */}
+        </Route>
+
+        {/* 404 Route (Optional) */}
+        <Route path="*" element={<h1 className="text-white text-center mt-20">404 - Page Not Found</h1>} />
       </Routes>
     </Router>
   );
