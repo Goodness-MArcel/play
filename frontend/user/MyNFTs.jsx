@@ -141,7 +141,7 @@ function MyNFTs() {
             <thead>
               <tr className="border-b border-[#2d4fff]/20 text-left text-[#8ea2ff] text-sm">
                 <th className="p-5 font-medium">NFT</th>
-                <th className="p-5 font-medium">Collection</th>
+                {/* <th className="p-5 font-medium">Collection</th> */}
                 <th className="p-5 font-medium">Price</th>
                 <th className="p-5 font-medium">Status</th>
                 <th className="p-5 w-20"></th>
@@ -153,7 +153,7 @@ function MyNFTs() {
                   key={nft.id}
                   className="hover:bg-[#1a254f]/50 transition group"
                 >
-                  <td className="p-5 flex items-center gap-4">
+                  <td className="p-3.5 flex items-center gap-3">
                     <div className="w-12 h-12 bg-gradient-to-br from-[#5f7dff]/10 to-[#8ea2ff]/10 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
                       {nft.image}
                     </div>
@@ -161,14 +161,14 @@ function MyNFTs() {
                       <p className="font-semibold group-hover:text-[#5f7dff] transition">
                         {nft.name}
                       </p>
-                      <p className="text-xs text-[#8ea2ff]">{nft.id}</p>
+                      {/* <p className="text-xs text-[#8ea2ff]">{nft.id}</p> */}
                     </div>
                   </td>
-                  <td className="p-5 text-[#8ea2ff]">{nft.collection}</td>
-                  <td className="p-5 font-medium text-[#5f7dff]">
+                  {/* <td className="p-3.5 text-[#8ea2ff]">{nft.collection}</td> */}
+                  <td className="p-3.5 font-medium text-[#5f7dff]">
                     {nft.price}
                   </td>
-                  <td className="p-5">
+                  <td className="p-3.5">
                     <span
                       className={`text-xs px-4 py-1.5 rounded-full ${
                         nft.status === "Listed"
@@ -179,10 +179,10 @@ function MyNFTs() {
                       {nft.status}
                     </span>
                   </td>
-                  <td className="p-5 text-right">
-                    <button className="text-[#5f7dff] hover:text-white opacity-0 group-hover:opacity-100 transition">
+                  <td className="p-3.5 text-right">
+                    {/* <button className="text-[#5f7dff] hover:text-white opacity-0 group-hover:opacity-100 transition">
                       View
-                    </button>
+                    </button> */}
                   </td>
                 </tr>
               ))}
