@@ -158,7 +158,7 @@ function MyNFTs() {
                       {nft.image}
                     </div>
                     <div>
-                      <p className="text-xs text-nowrap  font-semibold group-hover:text-[#5f7dff] transition">
+                      <p className="text-xs   font-semibold group-hover:text-[#5f7dff] transition">
                         {nft.name}
                       </p>
                       {/* <p className="text-xs text-[#8ea2ff]">{nft.id}</p> */}
