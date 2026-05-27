@@ -158,17 +158,17 @@ function MyNFTs() {
                       {nft.image}
                     </div>
                     <div>
-                      <p className="font-semibold group-hover:text-[#5f7dff] transition">
+                      <p className="text-xs text-nowrap  font-semibold group-hover:text-[#5f7dff] transition">
                         {nft.name}
                       </p>
                       {/* <p className="text-xs text-[#8ea2ff]">{nft.id}</p> */}
                     </div>
                   </td>
                   {/* <td className="p-3.5 text-[#8ea2ff]">{nft.collection}</td> */}
-                  <td className="p-3.5 font-medium text-[#5f7dff]">
+                  <td className="text-xs text-nowrap p-3.5 font-medium text-[#5f7dff]">
                     {nft.price}
                   </td>
-                  <td className="p-3.5">
+                  <td className="p-3.5 text-xs">
                     <span
                       className={`text-xs px-4 py-1.5 rounded-full ${
                         nft.status === "Listed"
