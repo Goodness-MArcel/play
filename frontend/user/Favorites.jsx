@@ -49,7 +49,6 @@ function Favorites() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h2 className="text-3xl font-semibold">Favorites</h2>
           <p className="text-[#8ea2ff] mt-1">{favorites.length} items saved</p>
         </div>
         <button className="text-red-400 hover:text-red-500 flex items-center gap-2 text-sm">

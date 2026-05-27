@@ -10,7 +10,6 @@ function Settings() {
 
   return (
     <div className="max-w-3xl space-y-8">
-      <h2 className="text-3xl font-semibold">Settings</h2>
 
       {/* Profile Settings */}
       <div className="bg-[#0b1330] border border-[#2d4fff]/30 rounded-3xl p-6 md:p-8">

@@ -23,7 +23,6 @@ function MyNFTs() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-3xl font-semibold">My NFTs</h2>
           <p className="text-[#8ea2ff] mt-1">You own {nfts.length} NFTs</p>
         </div>
 
