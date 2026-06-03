@@ -13,13 +13,17 @@
     "@fontsource-variable/space-grotesk": "^5.2.10",
     "@fontsource/inter": "^5.2.8",
     "@tailwindcss/vite": "^4.2.4",
+    "@tanstack/react-query": "^5.100.14",
+    "axios": "^1.16.1",
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^1.16.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-router-dom": "^7.15.1",
     "swiper": "^12.1.4",
-    "tailwindcss": "^4.2.4"
+    "tailwindcss": "^4.2.4",
+    "viem": "^2.51.3",
+    "wagmi": "^3.6.16"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

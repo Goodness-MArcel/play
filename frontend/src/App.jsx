@@ -5,16 +5,15 @@ import './index.css';
 // Pages
 import LandingPage from './pages/LandingPage';
 import SignupPage from './pages/SignupPage';
-
 // Dashboard Related
-// import DashboardLayout from './user/DashboardLayout';
-import DashboardLayout from '../user/DashboardLayout';
-import Dashboard from '../user/Dashboard';
-import Wallet from '../user/Wallet';
-import MyNFTs from '../user/MyNFTs';
-import MyProfile from '../user/Profile';
-import Settings from '../user/Settings';
-import Favorites from '../user/Favorites';
+import DashboardLayout from './user/DashboardLayout';
+import Dashboard from './user/Dashboard';
+import Wallet from './user/Wallet';
+import MyNFTs from './user/MyNFTs';
+import MyProfile from './user/Profile'
+import Settings from './user/Settings';
+import Favorites from './user/Favorites'
+
 
 function App() {
   return (

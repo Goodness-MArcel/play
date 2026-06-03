@@ -141,7 +141,6 @@ function MyNFTs() {
             <thead>
               <tr className="border-b border-[#2d4fff]/20 text-left text-[#8ea2ff] text-sm">
                 <th className="p-5 font-medium">NFT</th>
-                {/* <th className="p-5 font-medium">Collection</th> */}
                 <th className="p-5 font-medium">Price</th>
                 <th className="p-5 font-medium">Status</th>
                 <th className="p-5 w-20"></th>
@@ -161,10 +160,8 @@ function MyNFTs() {
                       <p className="text-xs   font-semibold group-hover:text-[#5f7dff] transition">
                         {nft.name}
                       </p>
-                      {/* <p className="text-xs text-[#8ea2ff]">{nft.id}</p> */}
                     </div>
                   </td>
-                  {/* <td className="p-3.5 text-[#8ea2ff]">{nft.collection}</td> */}
                   <td className="text-xs text-nowrap p-3.5 font-medium text-[#5f7dff]">
                     {nft.price}
                   </td>
@@ -180,9 +177,6 @@ function MyNFTs() {
                     </span>
                   </td>
                   <td className="p-3.5 text-right">
-                    {/* <button className="text-[#5f7dff] hover:text-white opacity-0 group-hover:opacity-100 transition">
-                      View
-                    </button> */}
                   </td>
                 </tr>
               ))}
