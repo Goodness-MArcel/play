@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base API URL
-export const API_BASE_URL = 'http://localhost:5000';   // Change this in production
+export const API_BASE_URL = 'http://localhost:5000/api';   // Change this in production
 
 // Configured Axios Instance
 export const Api = axios.create({

@@ -30,7 +30,7 @@ function SignupPage() {
   const handleSubmit = async () => {
     setIsLoading(true);
     try {
-      const response = await signup("/signup", formData);
+      const response = await signup(formData);
       
       console.log("Signup successful:", response.data);
       // alert("🎉 Welcome to PLAY NFT! Your account has been created.");
